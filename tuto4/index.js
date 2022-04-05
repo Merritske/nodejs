@@ -52,4 +52,5 @@ fs.readFile('readme.txt', "utf-8", (err, result)=>{
 fs.writeFile('readme.txt', JSON.stringify(newData), (err)=>{
     console.log('file is updated')
 })
+fs.unlink()
 })

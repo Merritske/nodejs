@@ -1,0 +1,22 @@
+.navbar {
+  justify-content: space-around;
+  font-size: 30px;
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar > li {
+  color: #8a2be2;
+  margin: 10px;
+}
+
+.navbar > li > span {
+  padding: 20px;
+}
+
+.navbar > li > span:hover {
+  border: 3px dashed #00f;
+  border-radius: 6px;
+}
+
+/*# sourceMappingURL=index.1303bb05.css.map */

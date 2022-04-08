@@ -1,0 +1,19 @@
+{
+  "name": "tuto8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "linebyline": "^1.3.0",
+    "request": "^2.88.2",
+    "s1eep": "^1.0.9",
+    "yargs": "^17.4.0",
+    "ytdl-core": "^4.11.0"
+  }
+}

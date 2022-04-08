@@ -8,6 +8,7 @@ var LineByLineReader = require('linebyline')
 
 const http = require('http')
 const path = require('path')
+const url = require('url')
 //video bepalen
 
 const options = yargs
@@ -57,33 +58,49 @@ const options = yargs
 //     //something went wrong
 // })
 
-const directoryPath = path.join(__dirname, '.');
-//passsing directoryPath and callback function
-fs.readdir(directoryPath, function (err, files) {
-    //handling error
-    if (err) {
-        return console.log('Unable to scan directory: ' + err);
-    }
-    http.createServer(function (req, res) {
-              res.writeHead(200, { 'Content-Type': 'text/html' })
+
+//trying to put in html
+const directoryPath = path.join(__dirname, '.')
+http.createServer(function (req, res){
+res.writeHead(200, {"Content-Type":"text/html"});
+res.end('<video src="./directoryPath" controls></video>')
+       fs.readlink(url.pathToFileURL(directoryPath), function(){
+           console.log("hello")
+       })
+    
+}).listen(4005, function (){
+    console.log("hei")
+})
+
+
+
+// const directoryPath = path.join(__dirname, '.');
+// //passsing directoryPath and callback function
+// fs.readdir(directoryPath, function (err, files) {
+//     //handling error
+//     if (err) {
+//         return console.log('Unable to scan directory: ' + err);
+//     }
+//     http.createServer(function (req, res) {
+//               res.writeHead(200, { 'Content-Type': 'text/html', "Accept-Ranges": "bytes" })
               
-        files.forEach(function (file) {
-            // Do whatever you want to do with the file
+//         files.forEach(function (file) {
+//             // Do whatever you want to do with the file
 
-            if (file.includes(".mp4")) {
-                let absolutePath = path.resolve(`./${file}`)
-                console.log(file)
+//             if (file.includes(".mp4")) {
+//                 let absolutePath = path.resolve(`./${file}`)
+//                 console.log(file)
           
-                res.write(`<h1>hello</h1><video width="320" height="240" controls>
-<source src="${absolutePath}" type="video/mp4"></video>`)
-console.log(absolutePath)
-            }
-        });
-        res.end()
-    }).listen(4005, function () {
-        console.log('reg')
-    })
-    //listing all files using forEach
+//                 res.write(`<h1>hello</h1><video width="320" height="240" controls>
+// <source src="${absolutePath}" type="video/mp4"></video>`)
+// console.log(absolutePath)
+//             }
+//         });
+//         res.end()
+//     }).listen(4005, function () {
+//         console.log('reg')
+//     })
+//     //listing all files using forEach
 
-});
+// });
 

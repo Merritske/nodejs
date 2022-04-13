@@ -1,0 +1,20 @@
+{
+  "name": "merritske",
+  "version": "3.2.1",
+  "description": "voorstelling van mezelf/portfolio",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "Merritske",
+    "An",
+    "Verbeeck",
+    "portfolio"
+  ],
+  "author": "An",
+  "license": "ISC"
+
+}

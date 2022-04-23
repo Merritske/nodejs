@@ -1,11 +1,11 @@
 {"persona":{
     "naam": "An Verbeeck",
-    "telefoon": "+32472694102",
-    "email": "merritske@gmail.com"
+    "linkedIn": "https://www.linkedin.com/in/an-verbeeck-161a2a99/"
+    "portfolio": "https://portfolio-merritske.vercel.app/"
 },
 "competenties":
 "leergierig, creatief, betrouwbaar, kan goed luisteren",
-"kennis": "verschillende talen, grafische computerprogramma's, front-end programma's en een basis van back-end",
+"kennis": " front-end programma's en een basis van back-end, grafische computerprogramma's, verschillende talen",
 "werkervaring": "onderwijs, administratie, verkoop",
 "diploma's": "master in de productdesign",
 "getuigschriften": "front-end development, digital coordinator",

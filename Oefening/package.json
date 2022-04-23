@@ -1,6 +1,6 @@
 {
   "name": "merritske",
-  "version": "3.2.3",
+  "version": "3.2.5",
   "description": "voorstelling van mezelf/portfolio",
   "main": "index.js",
   "bin": "index.js",
@@ -15,6 +15,9 @@
     "portfolio"
   ],
   "author": "An",
-  "license": "ISC"
-
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  }
 }

@@ -1,39 +1,64 @@
 #!/usr/bin/env node
-console.log("Bel of mail naar An Verbeeck om haar een job aan te bieden; 0472694102; merritske@gmail.com")
-
-// const fs = require('fs')
-// const http = require('http')
+console.log("merritske@gmail.com")
 
   
+var express = require('express');
+var app = express();
+var path = require('path');
+require("dotenv").config()
 
-//     fs.readFile("curriculum.json", "utf-8",(err, result)=>{
-// let data = JSON.stringify(result, null, 2)
-// let arrayList = data.split("\\r\\n");
-// // console.log(arrayList)
-//  http.createServer(function(req, res){
-//     res.writeHead(200, {"ContenType": "text/html"})
-//   arrayList.map((user)=>{
-//    let m = user.split("\\")
+app.use(express.static(path.join(__dirname, 'public')));
 
-//   if(m.length >= 4){
+app.get('/', function(req, res){
+    res.sendFile(path.join(__dirname, '/views/index.html'));    
+});
 
-//    let line = m.slice(1,m.length)
-//  res.write(`<p>${line}</p>`)
-   
-//  }
+app.get('/current', function(req, res){
+    
+    res.send(
+        `
+        #######################################
+                     AN VERBEECK 
+        #######################################
+        <br/>
+       <a href= "https://portfolio-merritske.vercel.app/">  https://portfolio-merritske.vercel.app/ </a>
+        `
+            
+    )
+    
+});
 
-// })
-//   res.end()
-//  }).listen(8080, function(){
-//      console.log("server is running at port 8080")
-//  })
+app.get('/skills', function(req, res){
+    res.send(
+`
+#########################################
+SOFTWARE DEVELOPER
+#########################################
+<br/>
 
-  
+competenties: leergierig, creatief, betrouwbaar, kan goed luisteren
+<br/>
+kennis: front-end programma's en een basis van back-end, grafische computerprogramma's, verschillende talen 
+<br/>
+werkervaring: onderwijs, administratie, verkoop
+<br/>
+diploma's: master in de productdesign
+<br/>
+getuigschriften: front-end development, digital coordinator
+<br/>
+hobbies: muziek, literatuur, natuur
+<br/>
 
+`)
+});
+
+app.listen(process.env.PORT || 1337, () => {
+    console.log('running...' + process.env.PORT || 1337);
+});
 
 
        
  
 
 
-// })
+

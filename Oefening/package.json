@@ -1,6 +1,6 @@
 {
   "name": "merritske",
-  "version": "3.2.5",
+  "version": "3.2.6",
   "description": "voorstelling van mezelf/portfolio",
   "main": "index.js",
   "bin": "index.js",

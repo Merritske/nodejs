@@ -21,7 +21,7 @@ app.get('/current', function(req, res){
                      AN VERBEECK 
         #######################################
         <br/>
-       <a href= "https://portfolio-merritske.vercel.app/">  https://portfolio-merritske.vercel.app/ </a>
+       <a href= "https://portfolio-merritske.vercel.app/" style="margin: 50px" >  https://portfolio-merritske.vercel.app/ </a>
         `
             
     )
@@ -34,21 +34,29 @@ app.get('/skills', function(req, res){
 #########################################
 SOFTWARE DEVELOPER
 #########################################
-<br/>
 
-competenties: leergierig, creatief, betrouwbaar, kan goed luisteren
-<br/>
+<p style="margin: 20px">
+<ul style="list-style-type:disc; ">
+<li style="margin: 20px">
+competenties: leergierig, creatief, betrouwbaar, kan goed luisteren  
+</li>
+<li style="margin: 20px">
 kennis: front-end programma's en een basis van back-end, grafische computerprogramma's, verschillende talen 
-<br/>
+</li>
+<li style="margin: 20px">
 werkervaring: onderwijs, administratie, verkoop
-<br/>
+</li>
+<li style="margin: 20px">
 diploma's: master in de productdesign
-<br/>
+</li>
+<li style="margin: 20px">
 getuigschriften: front-end development, digital coordinator
-<br/>
+</li>
+<li style="margin: 20px">
 hobbies: muziek, literatuur, natuur
-<br/>
-
+</li>
+</ul>
+</p>
 `)
 });
 

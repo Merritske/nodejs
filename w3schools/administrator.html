@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="be-nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>evenementenplanner</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>evenementenplanner</h1>
+        <button onclick=getevent()>Mijn evenementen</button>
+        <button onclick=nieuwEvent()>Nieuw evenement</button>
+    </header>
+    <main>
+        <div id="gegevensTonen"></div>
+
+        <!--Event aanmaken-->
+        <div id="evenementgegevens">
+            <form action="/index.js" method="post" id="evenement">
+                <div class="row">
+                    <label for="eventnaam">Vul de naam van je evenement in</label>
+                    <input type="text" id="eventnaam">
+                </div>
+                <div class="row">
+                    <label for="wanneer">Wanneer</label>
+                    <input type="date" id="wanneer">
+                </div>
+                <div class="row">
+
+
+                    <label for="startuur">startuur</label>
+                    <input type="time" id="startuur">
+                    <label for="einduur">einduur</label>
+                    <input type="time" id="einduur">
+                    <div style="font-size: smaller;margin-left: 10%;">
+                        AM : tussen middernacht en 12 uur 's middags <br>
+                        PM : tussen 12 uur 's middags en middernacht
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="waar">Waar</label>
+                    <input type="text" id="waar">
+                </div>
+                <input type="button" value="opslaan" onclick=opslaan()>
+            </form>
+        </div>
+
+        <!--Welke taken moeten gebeuren?
+Takenlijst opstellen met deadline-->
+        <div id="takenlijst">
+            <form action="">
+                <div class="row">
+                    <label for="naamTaak">Vul een taak in</label>
+                    <input type="text" id="naamTaak">
+                </div>
+                <div class="row">
+                    <label for="deadline">wanneer moet de taak uitgevoerd worden?</label>
+                    <input type="date" name="deadline" id="deadline">
+                </div>
+                <div class="row">
+                    <label for="aantalPersonen">hoeveel mensen zijn nodig om deze taak uit te voeren?</label>
+                    <input type="number" name="aantalPersonen" id="aantalPersonen">
+                </div>
+                <di class="row">
+                    <label for="opmerkingen">opmerkingen</label>
+                    <input type="text" name="opmerkingen" id="opmerkingen">
+                </di>
+            </form>
+            <button onclick=voegTaakToe()>Voeg taak toe</button>
+        </div>
+
+        <!--of een lijst maken, met listelement?
+    dan kan er meer informatie weergegeven worden?-->
+        <div>
+            <!--de opgegeven taken in een lijst zetten, mogelijkheid om taken nog te wijzigen of verwijderen-->
+            <table id="taken">
+                <tr>
+                    <td>taak</td>
+                    <td>deadline</td>
+                    <td>aantal personen</td>
+                    <td>opmerkingen</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+    </main>
+</body>
+<script src="index.js"></script>
+
+</html>

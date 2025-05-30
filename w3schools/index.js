@@ -6,6 +6,7 @@ let waar = document.getElementById("waar")
 let wanneer = document.getElementById("wanneer")
 let eventGegevens = []
 let eventTonen = document.getElementById("gegevensTonen")
+var fs = require('fs')
 
 //EVENTPLANNER
 
@@ -13,6 +14,7 @@ function opslaan() {
   eventGegevens.push({ wat: evenet.value, waar: waar.value, wanneer: wanneer.value })
   localStorage.setItem("evenementContainer", JSON.stringify(eventGegevens))
   console.log(eventGegevens)
+
   opslaanBtn.style.display = "none"
   if (opslaanBtn.style.display = "none") {
     //      let txtI = document.createElement("h1")
@@ -104,3 +106,8 @@ function aanmelden(){
 `}
 
 }
+
+  fs.appendFile('event1.txt',"heeloo", (err)=>{
+    if (err) throw err;
+  console.log('Saved!');
+  })
